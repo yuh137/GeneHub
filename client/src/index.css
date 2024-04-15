@@ -1,12 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-    font-family: 'Work Sans';
+  font-family: "Work Sans";
 }
 
 *:focus-visible {
-    outline: none;
+  outline: none;
+}
+
+.ant-carousel .slick-dots {
+  /* Your styles for the container of the dots */
+  @apply translate-y-12;
+}
+
+.ant-carousel .slick-dots li {
+  /* Your styles for individual dot */
+  @apply bg-[#CCCCCC] sm:w-2 sm:h-2 rounded-full opacity-100;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  /* Your styles for the button element inside each dot */
+  @apply sm:w-2 sm:h-2 bg-[#005555];
+}
+
+.ant-carousel .slick-dots li button {
+  /* Your styles for the button element inside each dot */
+  @apply sm:w-2 sm:h-2 bg-transparent;
+}
+
+.ant-carousel .slick-dots li.slick-active {
+  /* Your styles for active dot */
+  @apply sm:w-2 opacity-100;
+}
+
+.ant-carousel .slick-dots li button:hover {
+  /* Your styles for hover state of the dots */
+}
+
+.content-card:hover .right-quote-icon {
+  @apply text-[#005555] transition duration-75;
+}
+
+.ant-collapse-item-active .ant-collapse-header {
+  @apply bg-[#10D0A1] !text-white;
 }
