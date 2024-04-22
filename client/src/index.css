@@ -47,3 +47,13 @@ body {
 .ant-collapse-item-active .ant-collapse-header {
   @apply bg-[#10D0A1] !text-white;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

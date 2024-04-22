@@ -23,6 +23,7 @@ const FAQs = () => {
             with accessible content for understanding and treating genetic
             conditions.
           </p>
+          
         </div>
       ),
     },

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import NavBar from '../components/NavBar'
 import { Dropdown, Button, MenuProps, Carousel } from 'antd'
 import { carousel_data, feedback_carousel_data } from '../utils/MOCK_DATA'
@@ -6,15 +6,20 @@ import { CarouselRef } from 'antd/es/carousel'
 import { Icon } from '@iconify/react'
 import Footer from '../components/Footer'
 import { useWindowDimensions } from '../utils/hooks/useWindowDimensions'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
   const [selectedType, setSelectedType] = useState<string>("All");
+  const [inputValue, setInputValue] = useState<string>("");
+
+  const navigate = useNavigate();
 
   const { width } = useWindowDimensions();
-  console.log(process.env.REACT_APP_TEST);
+  // console.log(process.env.REACT_APP_TEST);
 
   const researchCarouselRef = useRef<CarouselRef>(null);
-  const feedbackCarouselRef = useRef<CarouselRef>(null);
+  // const feedbackCarouselRef = useRef<CarouselRef>(null);
+  const teamRefs = useRef<HTMLDivElement[]>([]);
 
   const targetType: MenuProps["items"] = [
     {
@@ -57,12 +62,19 @@ const Home = () => {
         <div className='overlay absolute w-full h-full top-0 left-0 bg-black/[0.3]'/>
         <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:space-y-4'>
           <div className='text-black sm:text-4xl font-semibold text-center mb-1'>GeneHub</div>
-          <div className='serach-filter sm:space-x-4'>
+          <div className='search-filter sm:space-x-4'>
             <Dropdown menu={{ items: targetType, onClick: handleClickDropdown, selectable: true, onSelect: handleSelectDropdown }} placement='bottomLeft' trigger={[ 'click' ]}>
               <Button className='sm:w-28 sm:min-w-16 sm:h-14 rounded-full text-center hover:!border-[#005555] hover:!text-white hover:!bg-[#005555]'>{selectedType}</Button>
             </Dropdown>
-            <input type="text" className='searchbar my-2 py-2 px-3 sm:w-[28svw] text-[16px] sm:h-14 rounded-full shadow-lg transition duration-75 hover:border hover:border-solid hover:border-[#005555]' placeholder='Search Symptomps'/>
-            <button className='sm:w-24 sm:h-14 rounded-full text-center text-sm text-white bg-[#005555] transition delay-150 hover:-translate-y-1'>Search</button>
+            <input type="text" className='searchbar my-2 py-2 px-3 sm:w-[28svw] text-[16px] sm:h-14 rounded-full shadow-lg transition duration-75 hover:border hover:border-solid hover:border-[#005555]' placeholder='Search Symptomps' onChange={(e) => {
+              e.preventDefault()
+              setInputValue(e.target.value)
+            }}/>
+            <button className='sm:w-24 sm:h-14 rounded-full text-center text-sm text-white bg-[#005555] transition delay-150 hover:-translate-y-1' onClick={() => {
+              console.log(inputValue)
+              if (inputValue === "" || !inputValue) navigate("/search/default")
+              else navigate(`/search/${inputValue}`);
+            }}>Search</button>
           </div>
         </div>
       </div>
@@ -161,16 +173,16 @@ const Home = () => {
             <div className='sm:text-2xl font-semibold'>Our Team</div>
             <div className='sm:max-w-[60%] sm:min-w-1/2 text-center text-[#aaa]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi repudiandae repellendus debitis nulla officia, dolor a adipisci praesentium odio! Aspernatur consequuntur reiciendis explicabo in quidem tempore, laudantium fugit quia est.</div>
           </div>
-          <div className="researcher-cards flex sm:space-x-4 justify-center">
-            {feedback_carousel_data.slice(0, 3).map((item, index) => (
-              <div className="researcher-card bg-white px-6 py-10 sm:w-[30%] flex flex-col items-center relative sm:space-y-6">
+          <div className="researcher-cards flex sm:gap-4 sm:gap-y-16 flex-wrap justify-center">
+            {feedback_carousel_data.map((item, index) => (
+              <div className="researcher-card bg-white px-6 py-10 sm:w-[30%] flex flex-col items-center justify-between relative sm:max-h-[50svh] sm:space-y-6">
                 <div className='bg-cover sm:w-20 sm:h-20 rounded-full absolute sm:-top-[40px]' style={{ backgroundImage: `url(${item.imageSrc})`}} key={index}/>
                 <div>
                   <div className="researcher-name text-xl font-semibold text-center text-[#294267]">{item.name}</div>
                   <div className="researcher-role text-center sm:text-sm text-[#aaa]">{item.role}</div>
                 </div>
-                <div className='text-center text-[#aaa]'>{item.quote}</div>
-                <div className='researcher-links flex sm:space-x-3'>
+                <div className='text-[#aaa] text-justify overflow-scroll text-ellipsis' ref={el => { if (el && teamRefs.current.length < feedback_carousel_data.length) {teamRefs.current[index] = el}}}>{item.quote}</div>
+                <div className='researcher-links flex sm:space-x-3 sm:relative'>
                   <div className='sm:w-10 sm:h-10 bg-[#294267] rounded-full border-2 border-solid border-[#294267] text-white flex justify-center items-center transition delay-100 hover:cursor-pointer hover:-translate-y-1 hover:bg-white hover:text-[#294267]'>
                     <Icon icon="mdi:twitter" />
                   </div>
