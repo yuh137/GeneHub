@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneHub.API", "GeneHub.API\GeneHub.API.csproj", "{7E7663D5-3F42-4E31-97C7-BDC6B6571FBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E7663D5-3F42-4E31-97C7-BDC6B6571FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7663D5-3F42-4E31-97C7-BDC6B6571FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7663D5-3F42-4E31-97C7-BDC6B6571FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7663D5-3F42-4E31-97C7-BDC6B6571FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE1F2B12-EB8A-4AAD-9B62-3BE94B0A4638}
+	EndGlobalSection
+EndGlobal

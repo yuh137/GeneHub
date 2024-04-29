@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import NavBar from '../components/NavBar'
 import { SearchData, search_items } from '../utils/MOCK_DATA'
 import { Icon } from '@iconify/react'
-import { useLoaderData, useNavigate } from 'react-router-dom'
+import { createSearchParams, useLoaderData, useNavigate } from 'react-router-dom'
 
 const SearchResults = () => {
   const data = useLoaderData() as SearchData[];
@@ -22,8 +22,18 @@ const SearchResults = () => {
               setInputValue(e.target.value);
             }} placeholder='Search Symptomps'/>
             <button className='sm:w-24 sm:h-14 rounded-full text-center text-sm text-white bg-[#005555] transition delay-150 hover:-translate-y-1' onClick={() => {
-              if (!inputValue || inputValue ==="") navigate("/search/default")
-              else navigate(`/search/${inputValue}`)
+              if (!inputValue || inputValue ==="") navigate({
+                pathname: "/search",
+                search: createSearchParams({
+                  searchTerm: ""
+                }).toString()
+              })
+              else navigate({
+                pathname: "/search",
+                search: createSearchParams({
+                  searchTerm: `${inputValue}`
+                }).toString()
+              })
             }}>Search</button>
           </div>
         </div>
@@ -34,7 +44,9 @@ const SearchResults = () => {
             <div className="result-items flex flex-col relative overflow-scroll items-center sm:gap-y-4 no-scrollbar">
               {(!data || data.length === 0) && <div>No matching items</div>}
               {data.map((item, index) => (
-                <div className='result-card sm:w-[80%] sm:min-h-32 border border-solid border-black rounded-md sm:px-8 sm:py-4 hover:text-white hover:bg-[#005555] hover:cursor-pointer transition delay-75' key={index}>
+                <div className='result-card sm:w-[80%] sm:min-h-fit border border-solid border-black rounded-md sm:px-8 sm:py-4 hover:text-white hover:bg-[#005555] hover:cursor-pointer transition delay-75' key={index} onClick={() => {
+                  navigate(`/disease/${item.id}`)
+                }}>
                   <div className='result-title font-semibold sm:text-xl'>{item.disease_name}</div>
                   <div className="result-detail grid grid-cols-9">
                     <div className='col-span-5'>

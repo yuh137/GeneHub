@@ -6,7 +6,7 @@ import { CarouselRef } from 'antd/es/carousel'
 import { Icon } from '@iconify/react'
 import Footer from '../components/Footer'
 import { useWindowDimensions } from '../utils/hooks/useWindowDimensions'
-import { useNavigate } from 'react-router-dom'
+import { createSearchParams, useNavigate } from 'react-router-dom'
 
 const Home = () => {
   const [selectedType, setSelectedType] = useState<string>("All");
@@ -15,7 +15,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const { width } = useWindowDimensions();
-  // console.log(process.env.REACT_APP_TEST);
+  // console.log(process.env.REACT_APP_API);
 
   const researchCarouselRef = useRef<CarouselRef>(null);
   // const feedbackCarouselRef = useRef<CarouselRef>(null);
@@ -71,9 +71,18 @@ const Home = () => {
               setInputValue(e.target.value)
             }}/>
             <button className='sm:w-24 sm:h-14 rounded-full text-center text-sm text-white bg-[#005555] transition delay-150 hover:-translate-y-1' onClick={() => {
-              console.log(inputValue)
-              if (inputValue === "" || !inputValue) navigate("/search/default")
-              else navigate(`/search/${inputValue}`);
+              if (inputValue === "" || !inputValue) navigate({
+                pathname: "/search",
+                search: createSearchParams({
+                  searchTerm: ""
+                }).toString()
+              })
+              else navigate({
+                pathname: `/search`,
+                search: createSearchParams({
+                  searchTerm: `${inputValue}`
+                }).toString()
+              });
             }}>Search</button>
           </div>
         </div>

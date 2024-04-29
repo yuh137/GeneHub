@@ -56,52 +56,40 @@ const Footer = () => {
         <div className="second-column sm:space-y-4">
           <div className="font-semibold text-[#0C2A52]">Links</div>
           <div className="grid grid-cols-2">
-            <div className="text-black w-fit underline sm:space-y-3">
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">
+            <div className="text-black w-fit sm:space-y-3">
+              <div className="hover:cursor-pointer hover:text-white hover:bg-[#005555] hover:-translate-y-1 sm:p-1 rounded-md transition duration-75">
                 <Link to="/info/about">About us</Link>
               </div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">
+              <div className="hover:cursor-pointer hover:text-white hover:bg-[#005555] hover:-translate-y-1 sm:p-1 rounded-md transition duration-75">
                 <Link to="/info/services">Services</Link>
               </div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">
+              <div className="hover:cursor-pointer hover:text-white hover:bg-[#005555] hover:-translate-y-1 sm:p-1 rounded-md transition duration-75">
                 <Link to="/info/vision">Vision</Link>
               </div>
-              <div className="text-black w-fit underline hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">
+              <div className="text-black w-fit hover:cursor-pointer hover:text-white hover:bg-[#005555] hover:-translate-y-1 sm:p-1 rounded-md transition duration-75">
                 Feedback
               </div>
-
-              {/* <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Mission</div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Terms</div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Privacy</div> */}
             </div>
-            <div className="text-black w-fit underline sm:space-y-3">
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">
+            <div className="text-black w-fit sm:space-y-3">
+              <div className="hover:cursor-pointer hover:text-white hover:bg-[#005555] hover:-translate-y-1 sm:p-1 rounded-md transition duration-75">
                 <Link to="/info/mission">Mission</Link>
               </div>
               <div
-                className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75"
+                className="hover:cursor-pointer hover:text-white hover:bg-[#005555] hover:-translate-y-1 sm:p-1 rounded-md transition duration-75"
                 onClick={() => openPDF()}
               >
                 Terms
               </div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">
+              <div className="hover:cursor-pointer hover:text-white hover:bg-[#005555] hover:-translate-y-1 sm:p-1 rounded-md transition duration-75">
                 <a
                   href="https://app.termly.io/dashboard/website/1847c2a7-9d66-4921-8f5a-2a60efd2529f/privacy-policy"
                   target="_blank"
                 >Privacy</a>
               </div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">
+              <div className="hover:cursor-pointer hover:text-white hover:bg-[#005555] hover:-translate-y-1 sm:p-1 rounded-md transition duration-75">
                 <Link to="/faq">FAQ</Link>
               </div>
             </div>
-            {/* <div className="text-[#aaa] w-fit underline sm:space-y-3">
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Partners</div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Business</div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Careers</div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Blog</div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">FAQ</div>
-              <div className="hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Creative</div>
-            </div> */}
           </div>
           <div className="icon-links flex sm:space-x-2">
             <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
@@ -124,34 +112,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* <div className="third-column sm:space-y-4">
-          <div className="links sm:space-y-4">
-            <div className="font-semibold text-[#0C2A52]">Links</div>
-            <div className="text-[#aaa] w-fit underline hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Our vision</div>
-            <div className="text-[#aaa] w-fit underline hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">About us</div>
-            <div className="text-[#aaa] w-fit underline hover:cursor-pointer hover:text-black hover:no-underline transition duration-75">Feedback</div>
-          </div>
-          <div className="icon-links flex sm:space-x-2">
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
-              <Icon icon="ri:instagram-line" />
-            </div>
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
-              <Icon icon="mdi:twitter" />
-            </div>
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
-              <Icon icon="ri:facebook-fill" />
-            </div>
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
-              <Icon icon="mdi:linkedin" />
-            </div>
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
-              <Icon icon="mdi:pinterest" />
-            </div>
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-2 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
-              <Icon icon="mdi:dribbble" />
-            </div>
-          </div>
-        </div> */}
       </div>
     </>
   );
