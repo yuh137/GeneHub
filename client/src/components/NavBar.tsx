@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <>
       <div className='sm:w-[85svw] sm:h-20 bg-[#005555] rounded-md flex justify-between items-center absolute left-1/2 -translate-x-1/2 top-4 sm:px-8 w-[90svw] h-16 px-4'>
-        <div className='text-[#ccc] font-semibold hover:text-white hover:cursor-pointer transition duration-100 sm:text-2xl justify-self-start self-center'>GeneHub</div>
+        <div className='text-[#ccc] font-semibold hover:text-white hover:cursor-pointer transition duration-100 sm:text-2xl justify-self-start self-center'>GeneHubAI</div>
         <Breadcrumb 
           className='justify-self-end self-center *:sm:space-x-8 sm:block hidden'
           separator=''

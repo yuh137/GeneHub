@@ -61,7 +61,7 @@ const Home = () => {
       <div className="first-container relative sm:w-svw sm:h-svh bg-cover" style={{ backgroundImage: "url('/images/gene_bg_0.jpg')" }}>
         <div className='overlay absolute w-full h-full top-0 left-0 bg-black/[0.3]'/>
         <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:space-y-4'>
-          <div className='text-black sm:text-4xl font-semibold text-center mb-1'>GeneHub</div>
+          <div className='text-black sm:text-4xl font-semibold text-center mb-1'>GeneHubAI</div>
           <div className='search-filter sm:space-x-4'>
             <Dropdown menu={{ items: targetType, onClick: handleClickDropdown, selectable: true, onSelect: handleSelectDropdown }} placement='bottomLeft' trigger={[ 'click' ]}>
               <Button className='sm:w-28 sm:min-w-16 sm:h-14 rounded-full text-center hover:!border-[#005555] hover:!text-white hover:!bg-[#005555]'>{selectedType}</Button>

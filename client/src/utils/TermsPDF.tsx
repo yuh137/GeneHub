@@ -25,7 +25,7 @@ const TermsPDF = () => {
           <Text style={tw("text-[18px] font-bold py-4")}>
             Welcome to GeneHub!
           </Text>
-          <Text style={tw("text-[16px] py-4 text-justify text-justify")}>
+          <Text style={tw("text-[16px] py-4 text-justify")}>
             The GeneHub website (the “Site”) is comprised of various web pages
             operated by SincePowere Publishing House, LLC (SPPH, LLC). GeneHub
             is offered to you conditioned on your acceptance without

@@ -23,6 +23,7 @@ const DiseaseDisplay = () => {
       <div className="info-container relative grid grid-cols-2 sm:py-8 sm:px-14 sm:gap-x-3">
         <div className="first-col sm:space-y-2 text-[#00204A]">
           <div className="sm:text-4xl font-semibold">{data?.disease_name}</div>
+          <div className="sm:text-2xl">{data?.gene}</div>
           <div className="sm:text-2xl font-semibold">Primary symptomps</div>
           <div>
             {data?.symptomps.map((symptom, index) => (
@@ -66,7 +67,7 @@ const DiseaseDisplay = () => {
             {data?.useful_links.map((link, index) => (
               <div
                 key={index}
-                className="sm:p-1 group relative hover:cursor-pointer hover:-translate-y-1 transition-all duration-75"
+                className="sm:py-1 sm:px-2 group relative hover:cursor-pointer hover:-translate-y-1 transition-all duration-75"
                 onClick={() => {
                   window.open(`${link}`, "_blank");
                 }}

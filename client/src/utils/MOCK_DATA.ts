@@ -108,39 +108,39 @@ export const carousel_data = [
 
 export const feedback_carousel_data = [
   {
-    imageSrc: "/images/person_1-min.jpg",
-    name: "Tetyana Vasylyeva",
+    imageSrc: "/images/person-5.png",
+    name: "Professor Tetyana L. Vasylyeva",
     quote:
       "Doctor of Medical Science, is a Professor in the Department of Pediatrics at Texas Tech University Health Sciences Center in Amarillo, Texas. Her primary interest is in the treatment of genetic diseases, and she is also a founder of SciencePower Publishing House, LLC. As a full professor at Texas Tech University Health Sciences Center, Dr. Vasylyeva has established a new nephrology service for the Texas Panhandle area. She is the author of 136 peer-reviewed researchpapers, multiple book chapters, and many abstracts.",
-    role: "Doctor of Medicine, PhD",
+    role: "MD, PhD, FAAP, CEO/Founder/PI",
   },
   {
-    imageSrc: "/images/person_4-min.jpg",
-    name: "Md Saimul Islam",
+    imageSrc: "/images/person-1.png",
+    name: "Dr. Md Saimul Islam, PhD",
     quote:
       "Is a geneticist who primarily focuses on molecular genetic disorders. His journey began during his doctoral studies when he investigated the molecular genetic status of the HPV gene and its role in breast cancer pathogenesis. He also explored genetic and epigenetic changes associated with drug resistance in breast cancer using in-vitro systems and patient samples. Concurrently, Islam contributed to enhanced molecular understanding of PML gene regulation in oncogenesis through a systematic approach. He made significant contributions to NCBI GenBank and ClinVar database by submitting novel splice form sequences and clinical variants of congenital nephroticsyndrome.",
-    role: "Senior Researcher",
+    role: "Senior Research Scientist",
   },
   {
-    imageSrc: "/images/person_3-min.jpg",
-    name: "Seungyeon Baek",
+    imageSrc: "/images/person-4.png",
+    name: "Seungyeon Baek, MS",
     quote:
       "She is building the web-based model. She made substantial contributions to project development.",
-    role: "TTU student - software developer",
+    role: "IT student - developer",
   },
   {
-    imageSrc: "/images/null_avatar.png",
-    name: "Trey Edison Money",
+    imageSrc: "/images/person-3.png",
+    name: "Trey Edison Money, BS",
     quote:
       "Graduated from the University of Texas at Austin with BS in Human Biology and Nutritional Sciences. He participated in the Inventors Program Practicum as a pathway to experience what it means to solve real-world problems and translate ideas into societal impact. The Inventors program was designed to empower students to engage in inventorship activities early in their undergraduate education. As a student, he was given a problem statement and spent the semester learning about problems experienced by real potential users of products, specifically in a healthcare setting. He learned about customer segmenting, how to interview to learn from customers-patients, and how to make a business model around our innovation (s). His team developed a proof-of-concept for a mobile application targeting physical therapy rehab patients.",
-    role: "Bachelor of Science",
+    role: "Team Leader, Research Aid",
   },
   {
-    imageSrc: "/images/null_avatar.png",
-    name: "Tommy Dang",
+    imageSrc: "/images/person-2.png",
+    name: "Dr. Tommy Dang, PhD",
     quote:
       "Is an Assistant Professor of Computer Science at Texas Tech University where he directs the interactive Data Visualization Lab (iDVL). His research on big data visualization and visual analytics has appeared in Computer Graphics Forum and IEEE Transactions on Visualization and Computer Graphics and has been presented at IEEE Information Visualization, IEEE Visual Analytics Science and Technology, EG/VGTC Conference on Visualization, among others. Dr. Dang has previously been a post-doc on a DARPA-funded project on biological network visualization at the Electronic Visualization Lab at the University of Illinois at Chicago which focuses on advanced virtual reality, notably the CAVE2™ hybrid reality environment and the SAGE2™ scalable amplified group environment.",
-    role: "Assistant Professor of Computer Science",
+    role: "Technical Leader, Assistant Professor of Computer Science",
   },
   {
     imageSrc: "/images/null_avatar.png",

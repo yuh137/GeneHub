@@ -37,7 +37,8 @@ function App() {
                   .toLowerCase()
                   .includes(searchTerm?.toLowerCase() || "") ||
                 item.gene.toLowerCase().includes(searchTerm?.toLowerCase() || "") ||
-                item.bio_name.toLowerCase().includes(searchTerm?.toLowerCase() || "") 
+                item.bio_name.toLowerCase().includes(searchTerm?.toLowerCase() || "") ||
+                item.symptomps.some(sym => sym.toLowerCase().includes(searchTerm?.toLowerCase() || ""))
             );
             // const response = await fetch(`http://localhost:5000/api/search?searchTerm=${searchTerm}`);
             // const data = await response.json();
