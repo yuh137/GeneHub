@@ -119,7 +119,7 @@ export const feedback_carousel_data = [
     name: "Dr. Md Saimul Islam, PhD",
     quote:
       "Is a geneticist who primarily focuses on molecular genetic disorders. His journey began during his doctoral studies when he investigated the molecular genetic status of the HPV gene and its role in breast cancer pathogenesis. He also explored genetic and epigenetic changes associated with drug resistance in breast cancer using in-vitro systems and patient samples. Concurrently, Islam contributed to enhanced molecular understanding of PML gene regulation in oncogenesis through a systematic approach. He made significant contributions to NCBI GenBank and ClinVar database by submitting novel splice form sequences and clinical variants of congenital nephroticsyndrome.",
-    role: "Senior Research Scientist",
+    role: "Entrepreneur Leader, Senior Research Scientist",
   },
   {
     imageSrc: "/images/person-4.png",

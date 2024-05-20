@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
         <div className="first-container relative">
-          <div className='sm:h-[70vh] sm:w-svw bg-cover' style={{ backgroundImage: `url("/images/hero_bg_1.jpg")` }} />
+          <div className='sm:h-[70vh] sm:w-svw bg-cover' style={{ backgroundImage: `url("/images/gene_bg_0.jpg")` }} />
           <div className='overlay absolute w-full h-full top-0 left-0 bg-black/[0.5]'/>
           <div className='font-semibold sm:text-5xl text-white absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2'>Contact Us</div>
         </div>

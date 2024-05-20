@@ -58,6 +58,7 @@ function App() {
             return rendered_disease;
           },
         },
+        
       ],
     },
   ]);
