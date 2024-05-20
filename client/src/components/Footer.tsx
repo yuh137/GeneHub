@@ -95,13 +95,13 @@ const Footer = () => {
             <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
               <Icon icon="ri:instagram-line" />
             </div>
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
+            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100" onClick={() => {window.open("https://twitter.com/GeneHubs", "_blank")}}>
               <Icon icon="mdi:twitter" />
             </div>
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
+            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100" onClick={() => {window.open("https://www.facebook.com/GeneHubAI/", "_blank")}}>
               <Icon icon="ri:facebook-fill" />
             </div>
-            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
+            <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100" onClick={() => {window.open("https://www.linkedin.com/in/genehubai-ai-384618305/", "_blank")}}>
               <Icon icon="mdi:linkedin" />
             </div>
             <div className="sm:w-[40px] sm:h-[40px] rounded-2xl bg-[#ccc] flex justify-center items-center hover:-translate-y-1 hover:bg-[#00204A] hover:text-white hover:cursor-pointer transition duration-100">
