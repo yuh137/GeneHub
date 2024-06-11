@@ -15,7 +15,13 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
-        { index: true, element: <Home /> },
+        {
+          index: true,
+          element: <Home />,
+          loader: async ({ request }) => {
+            return search_items;
+          },
+        },
         { path: "contacts", element: <Contact /> },
         { path: "info/:link", element: <FooterLinks /> },
         { path: "faq", element: <FAQs /> },
@@ -36,9 +42,15 @@ function App() {
                 item.disease_name
                   .toLowerCase()
                   .includes(searchTerm?.toLowerCase() || "") ||
-                item.gene.toLowerCase().includes(searchTerm?.toLowerCase() || "") ||
-                item.bio_name.toLowerCase().includes(searchTerm?.toLowerCase() || "") ||
-                item.symptomps.some(sym => sym.toLowerCase().includes(searchTerm?.toLowerCase() || ""))
+                item.gene
+                  .toLowerCase()
+                  .includes(searchTerm?.toLowerCase() || "") ||
+                item.bio_name
+                  .toLowerCase()
+                  .includes(searchTerm?.toLowerCase() || "") ||
+                item.symptomps.some((sym) =>
+                  sym.toLowerCase().includes(searchTerm?.toLowerCase() || "")
+                )
             );
             // const response = await fetch(`http://localhost:5000/api/search?searchTerm=${searchTerm}`);
             // const data = await response.json();
@@ -58,7 +70,6 @@ function App() {
             return rendered_disease;
           },
         },
-        
       ],
     },
   ]);

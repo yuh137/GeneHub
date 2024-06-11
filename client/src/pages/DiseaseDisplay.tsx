@@ -73,7 +73,7 @@ const DiseaseDisplay = () => {
                 }}
               >
                 <span className="absolute inset-0 bg-transparent transition-opacity group-hover:bg-[#005555] rounded-md"></span>
-                <div className="relative z-10 group-hover:text-white">
+                <div className="relative z-10 group-hover:text-white truncate">
                   {link}
                 </div>
               </div>

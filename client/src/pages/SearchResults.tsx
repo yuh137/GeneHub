@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import NavBar from '../components/NavBar'
-import { SearchData, search_items } from '../utils/MOCK_DATA'
+import { SearchData } from '../utils/MOCK_DATA'
 import { Icon } from '@iconify/react'
+import { Pagination } from 'antd'
 import { createSearchParams, useLoaderData, useNavigate } from 'react-router-dom'
 
 const SearchResults = () => {
   const data = useLoaderData() as SearchData[];
   const [inputValue, setInputValue] = useState<string>("");
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   const navigate = useNavigate();
   // console.log(data)
@@ -38,12 +40,12 @@ const SearchResults = () => {
           </div>
         </div>
         <NavBar />
-        <div className="search-result-section relative sm:w-svw sm:px-20 sm:py-10">
-          <div className="search-result-container flex flex-col gap-y-4 sm:min-h-[30svh] sm:max-h-svh sm:px-12 sm:py-6">
+        <div className="search-result-section relative flex flex-col sm:w-svw sm:px-20 sm:py-10">
+          <div className="search-result-container flex flex-col gap-y-4 sm:px-12 sm:py-6">
             <div className='font-bold sm:text-3xl'>Closest match</div>
-            <div className="result-items flex flex-col relative overflow-scroll items-center sm:gap-y-4 no-scrollbar">
+            <div className="result-items flex flex-col relative overflow-scroll sm:min-h-[80svh] items-center sm:gap-y-4 no-scrollbar">
               {(!data || data.length === 0) && <div>No matching items</div>}
-              {data.map((item, index) => (
+              {data.slice((currentPage - 1) * 5, (currentPage - 1) * 5 + 5).map((item, index) => (
                 <div className='result-card sm:w-[80%] sm:min-h-fit border border-solid border-black rounded-md sm:px-8 sm:py-4 hover:text-white hover:bg-[#005555] hover:cursor-pointer transition delay-75' key={index} onClick={() => {
                   navigate(`/disease/${item.id}`)
                 }}>
@@ -75,7 +77,7 @@ const SearchResults = () => {
                             <div className='flex items-center'>
                               <Icon icon="ic:sharp-play-arrow" />
                             </div>
-                            <div className='first-letter:uppercase'>{symptomp}</div>
+                            <div className='first-letter:capitalize truncate'>{symptomp}</div>
                           </div>
                         ))}
                       </div>
@@ -85,6 +87,7 @@ const SearchResults = () => {
               ))}
             </div>
           </div>
+          <Pagination className='self-center' current={currentPage} defaultPageSize={5} total={data.length} onChange={(page) => setCurrentPage(page)} />
         </div>
     </>
   )
