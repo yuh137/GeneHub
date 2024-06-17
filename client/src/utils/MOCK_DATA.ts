@@ -715,4 +715,61 @@ export const search_items: SearchData[] = [
       "https://rarediseases.org/rare-diseases/adie-syndrome/",
     ],
   },
+  {
+    id: "23",
+    gene: "Coming Soon",
+    inheritance: "Coming Soon",
+    disease_name: "ADNP Syndrome",
+    bio_name: "Coming Soon",
+    symptomps: [
+      
+    ],
+    description:
+      "ADNP-related intellectual disability, autism-related spectrum disorder Helsmoortel-Van Der Aa syndrome (HVDAS)",
+    clinical: [
+      
+    ],
+    treatment: "",
+    useful_links: [
+      "https://rarediseases.org/rare-diseases/adie-syndrome/",
+    ],
+  },
+  {
+    id: "24",
+    gene: "Coming Soon",
+    inheritance: "Coming Soon",
+    disease_name: "Adie Syndrome",
+    bio_name: "Coming Soon",
+    symptomps: [
+      
+    ],
+    description:
+      "Adie's Pupil Adie's Syndrome Adie's Tonic Pupil Holmes-Adie Syndrome tonic pupil syndrome",
+    clinical: [
+      
+    ],
+    treatment: "",
+    useful_links: [
+      "https://rarediseases.org/rare-diseases/adie-syndrome/",
+    ],
+  },
+  {
+    id: "25",
+    gene: "Coming Soon",
+    inheritance: "Coming Soon",
+    disease_name: "Adult Neuronal Ceroid Lipofuscinosis",
+    bio_name: "Coming Soon",
+    symptomps: [
+      
+    ],
+    description:
+      "Adult NCL ANCL Kufs syndrome Kufs disease Parry disease neuronal ceroid lipofuscinosis, adult type",
+    clinical: [
+      
+    ],
+    treatment: "",
+    useful_links: [
+      "https://rarediseases.org/rare-diseases/adie-syndrome/",
+    ],
+  },
 ];
