@@ -25,9 +25,24 @@ namespace GeneHub.API.Repositories.SQLImplementation
             return await users.ToListAsync();
         }
 
-        public Task<User> GetUserByIDAsync(Guid id)
+        public async Task<User?> GetUserByIDAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var user = await dbContext.Users.FirstOrDefaultAsync(item => item.UserID == id);
+
+            return user;
+        }
+
+        public async Task<User?> CreateUserAsync(User user)
+        {
+            await dbContext.Users.AddAsync(user);
+            await dbContext.SaveChangesAsync();
+
+            return user;
+        }
+
+        public async Task<User?> GetUserByUsername(string username)
+        {
+            return await dbContext.Users.FirstOrDefaultAsync(user => user.Username == username);
         }
     }
 }

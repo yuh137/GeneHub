@@ -5,7 +5,7 @@ namespace GeneHub.API.Data
 {
     public class GeneHubDbContext : DbContext
     {
-        public GeneHubDbContext(DbContextOptions options) : base(options)
+        public GeneHubDbContext(DbContextOptions<GeneHubDbContext> options) : base(options)
         {
             
         }

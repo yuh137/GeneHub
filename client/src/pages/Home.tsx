@@ -154,8 +154,8 @@ const Home = () => {
                   {item.gene}
                 </div>
                 <div className="sm:space-y-1">
-                  {item.symptomps.slice(0, 4).map((sym, index) => (
-                    <div key={index} className="text-[#aaa] capitalize">
+                  {item.symptomps.slice(0, 3).map((sym, index) => (
+                    <div key={index} className="text-black capitalize">
                       {index + 1}. {sym}
                     </div>
                   ))}
@@ -191,68 +191,6 @@ const Home = () => {
           </button>
         </div>
       </div>
-      {/* <div className="learn-more-container bg-[#F2F3F6] sm:space-x-6 py-8 px-24 flex justify-center">
-        <div className="learn-more-card sm:p-[30px] box-content sm:w-[240px] flex flex-col items-center bg-white space-y-4 text-[#0C2A52]">
-          <div className='flex flex-col items-center sm:space-y-2'>
-            <Icon icon="material-symbols:genetics-rounded" className='sm:text-[48px]'/>
-            <div className='text-center font-semibold'>Genetic basics</div>
-          </div>
-          <div className='text-center text-[#aaa]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, excepturi voluptatum nihil</div>
-          <div className='text-lg font-semibold transition-all ease-in delay-100 hover:underline hover:cursor-pointer underline-offset-[6px] decoration-2'>Learn more</div>
-        </div>
-        <div className="learn-more-card sm:p-[30px] box-content sm:w-[240px] flex flex-col items-center bg-white space-y-4 text-[#0C2A52]">
-          <div className='flex flex-col items-center sm:space-y-2'>
-            <Icon icon="solar:buildings-2-bold-duotone" className='sm:text-[48px]'/>
-            <div className='text-center font-semibold'>Research</div>
-          </div>
-          <div className='text-center text-[#aaa]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, excepturi voluptatum nihil</div>
-          <div className='text-lg font-semibold transition-all ease-in delay-100 hover:underline hover:cursor-pointer underline-offset-[6px] decoration-2'>Learn more</div>
-        </div>
-        <div className="learn-more-card sm:p-[30px] box-content sm:w-[240px] flex flex-col items-center bg-white space-y-4 text-[#0C2A52]">
-          <div className='flex flex-col items-center sm:space-y-2'>
-            <Icon icon="mdi:doctor" className='sm:text-[48px]'/>
-            <div className='text-center font-semibold'>Doctors</div>
-          </div>
-          <div className='text-center text-[#aaa]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, excepturi voluptatum nihil</div>
-          <div className='text-lg font-semibold transition-all ease-in delay-100 hover:underline hover:cursor-pointer underline-offset-[6px] decoration-2'>Learn more</div>
-        </div>
-        <div className="learn-more-card sm:p-[30px] box-content sm:w-[240px] flex flex-col items-center bg-white space-y-4 text-[#0C2A52]">
-          <div className='flex flex-col items-center sm:space-y-2'>
-            <Icon icon="iconoir:pharmacy-cross-circle" className='sm:text-[48px]'/>
-            <div className='text-center font-semibold'>Pharmacists</div>
-          </div>
-          <div className='text-center text-[#aaa]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, excepturi voluptatum nihil</div>
-          <div className='text-lg font-semibold transition-all ease-in delay-100 hover:underline hover:cursor-pointer underline-offset-[6px] decoration-2'>Learn more</div>
-        </div>
-      </div> */}
-      {/* <div className="customer-feedback-container flex flex-col pt-8 pb-20 px-12 sm:space-y-4">
-        <div className='flex justify-between'>
-          <div>Customer Feedback</div>
-          <div className="feedback-control-buttons sm:space-x-2">
-            <button className='sm:w-16 sm:h-10 rounded-full text-center text-sm text-black bg-[#ccc] transition delay-75 hover:bg-[#005555] hover:text-white' onClick={() => {feedbackCarouselRef.current?.prev()}}>Prev</button>
-            <button className='sm:w-16 sm:h-10 rounded-full text-center text-sm text-black bg-[#ccc] transition delay-75 hover:bg-[#005555] hover:text-white' onClick={() => {feedbackCarouselRef.current?.next()}}>Next</button>
-          </div>
-        </div>
-        <Carousel autoplay infinite slidesToShow={3} pauseOnHover={false} ref={feedbackCarouselRef}>
-          {feedback_carousel_data.map((item, index) => (
-            <div className="feedback-card sm:space-y-5 px-3" key={index}>
-              <div className="feedback-avatar bg-cover sm:w-24 sm:h-24 rounded-full" style={{ backgroundImage: `url(${item.imageSrc})` }} />
-              <div>
-                <div className='feedback-ratings flex'>
-                  <Icon icon='mdi:star' className='text-yellow-400 sm:w-4 sm:h-4'/>
-                  <Icon icon='mdi:star' className='text-yellow-400 sm:w-4 sm:h-4'/>
-                  <Icon icon='mdi:star' className='text-yellow-400 sm:w-4 sm:h-4'/>
-                  <Icon icon='mdi:star' className='text-yellow-400 sm:w-4 sm:h-4'/>
-                  <Icon icon='mdi:star' className='text-yellow-400 sm:w-4 sm:h-4'/>
-                </div>
-                <div className="feedback-name sm:text-xl text-[#0C2A52] font-semibold">{item.name}</div>
-              </div>
-              <div className="feedback-quote">{item.quote}</div>
-              <div className="feedback-role text-[#aaa]">{item.role}</div>
-            </div>
-          ))}
-        </Carousel>
-      </div> */}
       <div className="researcher-container py-8 px-12 bg-[#F2F3F6] sm:space-y-24 flex flex-col items-center">
         <div className="flex flex-col items-center sm:space-y-4">
           <div className="sm:text-2xl font-semibold">Our Team</div>
